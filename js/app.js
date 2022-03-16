@@ -8,8 +8,6 @@ function randomCustomer(min, max){
   return Math.ceil(Math.random() * (max - min + 1) + min);
 }
 
-// let jsRef = document.getElementById('cookie-data');
-
 let fishCakes = [];
 
 function CookieData(location, minCustomer, maxCustomer, avgCookies) {
@@ -31,8 +29,6 @@ CookieData.prototype.cookiesPerHour = function(){
 
 CookieData.prototype.render = function(){
   this.cookiesPerHour();
-  // let tableElem = document.getElement('table');
-  // jsRef.appendChild(tableElem);
 
   let row1 = document.createElement('tr');
   cookieTable.appendChild(row1);
