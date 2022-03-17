@@ -8,7 +8,7 @@ function randomCustomer(min, max){
   return Math.ceil(Math.random() * (max - min + 1) + min);
 }
 
-let fishCakes = [];
+let storesArr = [];
 
 function CookieData(location, minCustomer, maxCustomer, avgCookies) {
   this.location = location;
@@ -17,7 +17,7 @@ function CookieData(location, minCustomer, maxCustomer, avgCookies) {
   this.avgCookies = avgCookies;
   this.totalCookies = 0;
   this.cookiesBought = [];
-  fishCakes.push(this);
+  storesArr.push(this);
 }
 
 CookieData.prototype.cookiesPerHour = function(){
@@ -66,18 +66,41 @@ function createTableHeader(){
   thElem = document.createElement('th');
   thElem.textContent = 'Daily Total';
   row1.appendChild(thElem);
-};
-
-function renderAllCookies(){
-  for(let i = 0; i < fishCakes.length; i++){
-    fishCakes[i].cookiesPerHour();
-    fishCakes[i].render();
-  }
 }
 
-// function createTableFooter(){
-//iterate over each hour, then iterate overeach hour grab that hour's total for each city, then add them up.
-// }
+function renderAllCookies(){
+  for(let i = 0; i < storesArr.length; i++){
+    storesArr[i].cookiesPerHour();
+    storesArr[i].render();
+  }
+  console.log(storesArr);
+}
+
+function createTableFoot(){
+  let footRow = document.createElement('tr');
+  cookieTable.appendChild(footRow);
+  let thElem = document.createElement('th');
+  thElem.textContent = 'Grand Totals';
+  footRow.appendChild(thElem);
+
+  let grandTotalCookies = 0;
+
+  for(let i = 0; i < hoursOperation.length; i++){
+    let hourTotals = 0;
+
+    for(let j = 0; j < storesArr.length; j++){
+      hourTotals += storesArr[j].cookiesBought[i];
+      grandTotalCookies += storesArr[j].cookiesBought[i];
+    }
+    thElem = document.createElement('th');
+    thElem.textContent = hourTotals;
+    footRow.appendChild(thElem);
+  }
+  thElem = document.createElement('th');
+  thElem.textContent = grandTotalCookies;
+  footRow.appendChild(thElem);
+}
+//iterate over each hour, then grab that hour's total for each city, then add them up.
 
 new CookieData('Seattle', 23, 65, 6.3);
 new CookieData('Tokyo', 3, 24, 1.2);
@@ -87,7 +110,7 @@ new CookieData('Lima', 2, 16, 4.6);
 
 createTableHeader();
 renderAllCookies();
-
+createTableFoot();
 
 
 // ******** YESTERDAY ********
