@@ -1,20 +1,115 @@
 body {
-  background-color: rgb(213, 215, 216);
+  background-color: rgb(205, 153, 212);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
 }
 
-header {
-  /* background: linear-gradient(0.25turn, #f8977f, #f7c399, #fd987f); */
-  border-top: 20px double rgb(183, 126, 209);
-  border-bottom: 20px double rgb(125, 192, 192);
-  text-shadow: 5px 5px rgb(183, 126, 209);
-  padding: 30px;
-  margin: 30px 30px 60px 30px;
-  text-align: center;
-  font-size: 40pt;
-  font-weight: 900;
-  color: rgb(125, 202, 192);
+div {
+  background-color: #db5f40;
+  padding: 10px;
 }
+header {
+  padding: 30px;
+  margin-top: 30px;
+  font-size: 65pt;
+  color: #db5f40;
+  font-family: 'Bungee Outline', cursive;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  margin: 15px;
+}
+
+h2 {
+  font-family: 'Bungee Outline', cursive;
+  font-weight: 900;
+  font-size: 50pt;
+  color: #db5f40;
+  margin-bottom: 60px;
+}
+
+header img {
+  max-width: 300px;
+  opacity: 80%;
+}
+
+nav {
+  display: flex;
+  background-color: #db5f40;
+  color: rgb(223, 172, 223);
+  justify-content: space-evenly;
+  padding: 20px;
+  font-size: 16pt;
+}
+
+nav li {
+  display: inline;
+  margin: 40px;
+}
+
+h3 {
+  font-size: 15pt;
+  margin-top: 40px;
+}
+
+div {
+  display: flex;
+}
+
+nav ~ section {
+  display: flex;
+  margin: 0 50px;
+}
+
+section img {
+  margin: 20px;
+  max-width: 600px;
+}
+
+h4 {
+  font-size: 16pt;
+  background-color: #db5f40;
+  padding: 15px;
+}
+
+article {
+  font-size: 22pt;
+  margin: 60px;
+  font-family: 'Permanent Marker', cursive;
+  color: #3d3d3d;
+}
+
+div img {
+  display: inline;
+  /* background-color: rgb(205, 153, 212); */
+  margin: 20px;
+  justify-content: space-evenly;
+  max-width: 300px;
+}
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+section ul {
+  display: inline;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+footer {
+  background-color: rgb(213, 183, 218);
+  padding: 20px;
+}
+
+
+/* _______________ SALES PAGE TABLE _________________ */
 
 table {
   border: 10px solid rgb(97, 116, 119);
