@@ -17,15 +17,29 @@ header {
 }
 
 table {
-  border: 10px solid rgb(101, 140, 145);
+  border: 10px solid rgb(97, 116, 119);
   margin: auto;
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
-th, td {
-  background-color: rgb(146, 191, 199);
-  width: 13px;
-  margin: auto;
-  padding: 7px 10px 10px 10px;
+th {
+  background-color: rgb(169, 194, 197);
+  padding: 10px;
   text-align: center;
+  border: 1px solid white;
+  font-weight: 600;
+}
+
+td {
+  background-color: rgb(147, 189, 185);
+  padding: 5px;
+  text-align: center;
+  border: 1px solid white;
+}
+
+#hSales {
+  text-align: center;
+  margin: 30px;
+  font-size: 3em;
+  font-weight: 900;
 }
