@@ -100,7 +100,6 @@ function createTableFoot(){
   thElem.textContent = grandTotalCookies;
   footRow.appendChild(thElem);
 }
-//iterate over each hour, then grab that hour's total for each city, then add them up.
 
 new CookieData('Seattle', 23, 65, 6.3);
 new CookieData('Tokyo', 3, 24, 1.2);
@@ -111,6 +110,31 @@ new CookieData('Lima', 2, 16, 4.6);
 createTableHeader();
 renderAllCookies();
 createTableFoot();
+
+// ******** F O R M ***********
+
+let myForm = document.getElementById('getForm');
+myForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event){
+  event.preventDefault();
+
+  let name = event.target.name.value;
+  let min = +event.target.min.value;
+  let max = +event.target.max.value;
+  let avg = +event.target.avg.value;
+
+  let userStore = new CookieData(name, min, max, avg);
+  userStore.cookiesPerHour();
+  userStore.render();
+
+  footRow.innerHTML = '';
+  for(let i = 0; i < storesArr.length; i++){
+    hourTotals[i] = 0; //yikes what's going on now
+  } // grandTotalCookies
+  // what do I call here();
+  createTableFoot();
+}
 
 
 // ******** YESTERDAY ********
