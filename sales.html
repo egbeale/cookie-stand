@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <title>cookie-stand</title>
@@ -9,7 +12,21 @@
   <h2 id="Sales">Sales by Location</h2>
   <!-- <section id="cookie-data"></section> -->
     <table id="cookie-table"></table>
-  <script src="./js/app.js"></script>
+  <form id="getForm">
+    <fieldset>
+      <legend>New Store</legend>
+      <label for="name">Store Location:</label>
+      <input type="text" name="name" id="name">
+      <label for="min">Minimum Customers per Hour:</label>
+      <input type="number" name=min id="min">
+      <label for="max">Maximum Customers per Hour:</label>
+      <input type="number" name="max" id="max">
+      <label for="avg">Average Cookies per Customer:</label>
+      <input type="text" name="avg" id="avg">
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
   <h5><a href="index.html">Back to Home</h5>
+  <script src="./js/app.js"></script>
 </body>
 </html>
