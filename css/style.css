@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(205, 153, 212);
+  background-color: rgb(208, 176, 212);
   text-align: center;
   font-family: 'Fredoka', sans-serif;
 }
@@ -52,13 +52,6 @@ nav li {
   margin: 40px;
 }
 
-a {
-  color: rgb(223, 172, 223);
-}
-a:link {
-  text-decoration: none;
-}
-
 /* ______________MAIN_MAIN_MAIN____________________ */
 
 /* ________________FAMILY SECTION__________________ */
@@ -109,34 +102,30 @@ section > ul {
 }
 
 div { /* __________________ SHOP ___________________*/
-  /* justify-content: center; */
-  background-color: rgb(205, 153, 212);
   display: flex;
   justify-content: space-evenly;
+  background-color: rgb(208, 176, 212);
 }
 
 div > img {
   display: inline;
-  /* margin: 20px 20px 0 20px; */
   max-width: 300px;
   border-radius: 50%;
 }
 
 div > p {
   max-width: 300px;
-  color: black;
   font-size: 14pt;
-  margin-bottom: 100px;
-  text-align: center;
-  margin-left: 50px;
+  margin-bottom: 50px;
 }
 
 div ~ section {
   background-color: white;
   justify-content: center;
-  border-top: 30px dashed rgb(205, 153, 212);
+  border-top: 25px dashed rgb(208, 176, 212);
   padding: 40px;
 }
+
 section > p {
   line-height: 15em;
   color: #db5f40;
@@ -144,30 +133,37 @@ section > p {
 footer {
   background-color: white;
   padding: 20px;
+  border-bottom: 25px dashed rgb(208, 176, 212);
+  ;
 }
 
 
 /* _______________ SALES TABLE _________________ */
 
 table {
-  border: 10px solid rgb(97, 116, 119);
+  /* border: 5px solid #db5f40; */
   margin: auto;
   font-size: 12pt;
+  box-shadow: -12px 12px rgb(215, 107, 95),
+  -24px 24px rgb(6, 89, 213);
+  /* box-shadow: -15px 15px rgb(106, 133, 138),
+              -25px 25px rgb(80, 94, 103); */
 }
 
 th {
-  background-color: rgb(169, 194, 197);
+  /* background-color: rgb(161, 189, 192); */
+  background-color: rgb(202, 216, 215);
   padding: 10px;
   text-align: center;
-  border: 1px solid white;
+  border: 2px solid blue;
   font-weight: 600;
 }
 
 td {
-  background-color: rgb(147, 189, 185);
+  background-color: white;
   padding: 5px;
   text-align: center;
-  border: 1px solid white;
+  border: 2px solid blue;
 }
 
 #Sales {
@@ -176,8 +172,56 @@ td {
   font-size: 3em;
   font-weight: 900;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: -5px 5px blue;
+}
+
+fieldset {
+  background-color: rgb(219, 188, 222);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 30%;
+  padding: 10px;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16pt;
+  box-shadow: -15px 15px blue;
+}
+
+legend {
+  background-color: #db5f40;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18pt;
+  padding: 20px;
+  border-radius: 30%;
+  box-shadow: -5px 5px rgb(34, 66, 209);
+}
+
+label {
+  margin: 10px;
+}
+
+button {
+  margin: 5px;
+  background-color: #db5f40;
+  margin: 40px;
+  font-size: 18pt;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: -5px 5px blue;
 }
 
 h5 {
-  margin-top: 40px;
+  margin: 40px 0;
+  background-color: #db5f40;
+}
+
+a {
+  color: black;
+  font-size: 18pt;
+}
+a:link {
+  text-decoration: none;
 }
