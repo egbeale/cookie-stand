@@ -1,7 +1,7 @@
 body {
   background-color: rgb(208, 176, 212);
   text-align: center;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Marcellus', serif;
 }
 
 div {
@@ -14,7 +14,6 @@ header {
   font-size: 65pt;
   color: #db5f40;
   font-family: 'Bungee Outline', cursive;
-  font-weight: 900;
   display: flex;
   justify-content: center;
 }
@@ -43,7 +42,8 @@ nav {
   background-color: #db5f40;
   color: rgb(223, 172, 223);
   padding: 20px;
-  font-size: 16pt;
+  font-size: 18pt;
+  font-weight: 700;
   justify-content: center;
 }
 
@@ -146,12 +146,9 @@ table {
   font-size: 12pt;
   box-shadow: -12px 12px rgb(215, 107, 95),
   -24px 24px rgb(6, 89, 213);
-  /* box-shadow: -15px 15px rgb(106, 133, 138),
-              -25px 25px rgb(80, 94, 103); */
 }
 
 th {
-  /* background-color: rgb(161, 189, 192); */
   background-color: rgb(202, 216, 215);
   padding: 10px;
   text-align: center;
