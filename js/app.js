@@ -5,7 +5,7 @@ let hoursOperation = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm',
 let cookieTable = document.getElementById('cookie-table');
 
 function randomCustomer(min, max){
-  return Math.ceil(Math.random() * (max - min + 1) + min);
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 let storesArr = [];
@@ -22,8 +22,10 @@ function CookieData(location, minCustomer, maxCustomer, avgCookies) {
 
 CookieData.prototype.cookiesPerHour = function(){
   for(let i = 0; i < hoursOperation.length; i++){
-    this.cookiesBought.push(Math.ceil(randomCustomer (this.minCustomer, this.maxCustomer) * this.avgCookies));
+    let cookies = (Math.ceil(randomCustomer (this.minCustomer, this.maxCustomer) * this.avgCookies));
+    this.cookiesBought.push(cookies);
     this.totalCookies = this.totalCookies + this.cookiesBought[i];
+    console.log(this.totalCookies);
   }
 },
 
@@ -64,17 +66,17 @@ function createTableHeader(){
   }
 
   thElem = document.createElement('th');
-  thElem.textContent = 'Daily Total';
+  thElem.textContent = 'Daily Store Total';
   row1.appendChild(thElem);
 }
 
 function renderAllCookies(){
   for(let i = 0; i < storesArr.length; i++){
-    storesArr[i].cookiesPerHour();
+    // storesArr[i].cookiesPerHour();
     storesArr[i].render();
   }
-  console.log(storesArr);
 }
+
 
 function createTableFoot(){
   let footRow = document.createElement('tr');
@@ -120,21 +122,27 @@ function handleSubmit(event){
   event.preventDefault();
 
   let name = event.target.name.value;
-  let min = +event.target.min.value;
-  let max = +event.target.max.value;
-  let avg = +event.target.avg.value;
+  let min = event.target.min.value;
+  let max = event.target.max.value;
+  let avg = event.target.avg.value;
+
+  cookieTable.innerHTML = '';
 
   let userStore = new CookieData(name, min, max, avg);
-  userStore.cookiesPerHour();
-  userStore.render();
 
-  footRow.innerHTML = '';
-  for(let i = 0; i < storesArr.length; i++){
-    hourTotals[i] = 0; //yikes what's going on now
-  } // grandTotalCookies
-  // what do I call here();
+  createTableHeader();
+  renderAllCookies();
   createTableFoot();
-}
+
+
+  // userStore.cookiesPerHour();
+  // userStore.render();
+
+  // createTableFoot();
+
+  // for(let i = 0; i < storesArr.length; i++){
+// hourTotals[i] = 0; //yikes what's going on here
+} // grandTotalCookies();
 
 
 // ******** YESTERDAY ********
